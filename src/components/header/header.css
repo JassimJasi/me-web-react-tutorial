@@ -1,0 +1,165 @@
+header {
+  height: 100vh;
+  /*padding-top: 7rem;*/
+  overflow: hidden;
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxvv21eIC_Xz1ixSSR_Ce0QHbb2VRXIOtUyEG1wm3M&s"); */
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+.headerContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.headerContent h5 {
+  font-size: 35px !important;
+}
+.headerContent h1 {
+  font-size: 55px !important;
+}
+/* CTA */
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+/* Header Socials */
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/* Image ME */
+
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+  left: calc(50% - 11rem);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+/* Scroll Dowm */
+
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* Media Queries (Medium) */
+@media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }
+}
+
+/* Media Queries (Small) */
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+  .header__socials,
+  .scroll-down {
+    display: none;
+  }
+}
+/*---------------------*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.curved-header {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: Montserrat, sans-serif;
+  position: relative;
+}
+.curved-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://res.cloudinary.com/dliyqijim/image/upload/v1666775654/pexels-fauxels-3183197_tphzpp.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 0 0 50% 50%/ 0 0 100% 100%;
+  transform: scale(1.5);
+  z-index: -1;
+}
+.curved-header .logo {
+  margin: 50px;
+}
+.curved-header .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+}
+.curved-header .nav-links {
+  margin: 50px;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+}
+.curved-header .nav-links li {
+  margin: 0 15px;
+}
+.curved-header .nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+}
+.nav-links li a:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.nav-links li a:hover:after {
+  transform: scaleX(1);
+}
